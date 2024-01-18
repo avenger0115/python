@@ -1,121 +1,53 @@
-##s1 = set([1,2,3,])
-##s2 = set('apple')
-##print(s1)
-##print(s2)
-##a = 1
-##print(a)
-##a += 1
-##print(a)
-##a *= 2
-##print(a)
-##t1 = (1,)
-##t2 = (4,5,6,)
-##print(t1+t2)
-##print(t2*2)
-##print(t2[0])
-##print(t2[1:3])
-##del t2[0]
-##s1 =set([1,2,3,4,5,6,])
-##s2 = set([4,5,6,7,8,9,])
-##print(s1-s2)
-##print(s1 & s2)
-##print(s2 | s2)
-##a = {'a' : 1, 'b' : 2, 'c' :3, 'd' :4}
-##print(a.keys())
-##print(a.values())
-##print(a.items())
-##a.clear()
-##print(a)
-##a = {'name' : 'minsu', 'address' : 'seoul', 'phone' : '010-1234-1234'}
-##print(a.keys())
-##a =set([1,2,3,])
-##a.add(4)
-##print(a)
-##a.update('abc')
-##print(a)
-##a.remove('c')
-##print(a)
-##import turtle
-##t = turtle.Turtle()
-##t.fillcolor('red')
-##t.begin_fill()
-##t.right(60)
-##t.circle(25,180)
-##t.right(120)
-##t.circle(25,180)
-##t.right(120)
-##t.circle(25,180)
-##t.right(120)
-##t.circle(25,180)
-##t.right(120)
-##t.circle(25,180)
-##t.right(120)
-##t.circle(25,180)
-##t.end_fill()
-##
-##t.fillcolor('yellow')
-##t.begin_fill()
-##t.right(60)
-##t.circle(50)
-##t.end_fill()
-##
-##turtle.done()
-##
-##import turtle
-##t = turtle. Turtle()
-##
-## 사용자에게 문자열 입력받기
-##s = turtle.textinput('즐거운 씨큐브 코딩', '이름을 알려주세요')
-##t.write("%s님 반갑습니다^^" % s)
-##turtle.done()
-##import turtle
-##t = turtle.Turtle(shape = "turtle")
-##s = "즐거운 씨큐브 코딩"
-## 사용자에게 숫자 입력받기
-##n = turtle.numinput(s, "압으로 얼마나 이동할까요?")
-##t.forward(n)
-##ang = turtle.numinput(s, "오른쪽으로 얼마나 호전할까요? :", default = 0, minval = 0, maxval = 360)
-##t.right(ang)
-##turtle.done()
-##a = (1,)
-##b = (2,3,4,)
-##print(a+b)
-##s1 = set([1,2,3,4])
-##print(s1)
-##a = set(['a','b','c','c','d','e','a'])
-##print(a)
-##a = {'a' : 90, 'b' :85, 'c' : 95}
-##a['e'] = 70
-##a['a'] = 100
-##print(a)
-d = {'plus' : ['더하기','장점'],
-     'minus' :['빼기','적자'],
-     'multiply' : ['곱하기','다양하게'],
-     'division' :['나누기','분열']}
-word = input('영어단어를 입력하세요.:')
-print(d[word])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##1.
+##a = int (input("inch : "))
+##print("%fcm"%(a*2.54))
+##2.
+##a = int (input("inch : "))
+##b = a*2.54
+##print(b)
+##x = 10
+##y = 50
+##print('x : %d, y : %d' %(x,y))
+##print('x와 y는같다?', x==y)
+##print('x와 y는 다르다?',x !=y)
+##print('x는 y보다 크다?',x > y)
+##print('x는 y보다 작다?', x <y)
+##print('x는 y보다 크거나 같다?', x >=y)
+##print('x는 y보다 작거나 같다?', x<=y)
+##a = int(input())
+##b = int(input())
+##c = int(input())
+##print(a>=140 and b>=140 and c>=140)
+##score = int(input('score : '))
+##if score >= 60 : 
+##    print('Pass')
+##else :
+##a = int(input())
+##if a%2==0 :
+##    print('EVEN')
+##else :
+##    print('ODD')
+##score=input("성별을 입력하세요. : ")
+##if score == 'M' :
+##    print('Man')
+##elif score == 'W' :  
+##    print('Woman')
+##else :
+##    print('what')
+##score = input('월을 입력하세요. : ')
+##score = int(score)
+##if score>=1 and score<=6 :
+##    print('first haif')
+##elif score>=7 and score<=12 :
+##    print('second haif')
+score = input('다음과 같은 메뉴가 있습니다. : ')
+score = int(score)
+if score == 1 :
+    print('burgers are not available')
+elif score>=2 and score<=3 :
+    print('what would you like to drink?')
+elif score == 4 :
+    print('l like coke, too.',)
+else :
+    print('would you like hot or cold?')
 
