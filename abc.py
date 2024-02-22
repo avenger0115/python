@@ -1,43 +1,91 @@
+##import sys
+##import pygame
+##from pygame.locals import *
+##
+##pygame.init()
+##SCREEN = pygame.display.set_mode((300,300))
+##CLOCK = pygame.time.Clock()
+##
+##BLACK = (0,0,0)
+##WHITE = (255,255,255)
+##
+##sysfont = pygame.font.SysFont(None,36)
+##
+##txt = sysfont.render("",True,BLACK)
+##
+##while True :
+##    SCREEN.fill(WHITE)
+##
+##    for event in pygame.event.get() :
+##        if event.type == QUIT :
+##            pygame.quit()
+##            sys.exit()
+##            
+##        if event.type == KEYDOWN:
+##            
+##            if event.key == K_UP :
+##                txt = sysfont.render("UP", True, BLACK) 
+##
+##            if event.key == K_DOWN :
+##                txt = sysfont.render("DOWN", True, BLACK) 
+##
+##            if event.key == K_LEFT :
+##                txt = sysfont.render("LEFT", True, BLACK) 
+##
+##            if event.key == K_RIGHT :
+##                txt = sysfont.render("RIGHT", True, BLACK) 
+##
+##            if event.key == K_ESCAPE :
+##               pygame.quit()
+##               sys.exit()
+##
+##    SCREEN.blit(txt, (100,120))
+##    pygame.display.update()
+##    CLOCK.tick(60)
+        
 import sys
 import pygame
 from pygame.locals import *
 
 pygame.init()
-SURFACE = pygame.display.set_mode((400,300))
+SCREEN = pygame.display.set_mode((300,300))
 CLOCK = pygame.time.Clock()
 
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-RED = (255, 0, 0)
-GREEN = (0,255,0)
-BLUE = (0,0,255)
+
+sysfont = pygame.font.SysFont(None,36)
+
+txt = sysfont.render("0",True,(0,0,0))
+
+n = 0
 
 while True :
+    SCREEN.fill((255,255,255))
+    
     for event in pygame.event.get() :
         if event.type == QUIT :
-            pygam.quit()
+            pygame.quit()
             sys.exit()
-            
-    SURFACE.fill(WHITE)
+        if event.type == KEYDOWN:
 
-    rec = Rect(20,10,60,40)
+            if event.key == K_UP :  
+                 n +=10
+            if event.key == K_DOWN :
+                 n-=10
+            if event.key == K_LEFT :
+                 n *=10
+            if event.key == K_RIGHT :
+                 n //=10
+            if event.key == K_ESCAPE :
+                pygame.quit()
+                sys.exit()
+        if event.type == MOUSEBUTTONDOWN :
+           if event.button == 1:
+               n =0
 
-    pygame.draw.rect(SURFACE, RED, rec)
-
-    pygame.draw.circle(SURFACE, GREEN, (120,50),10)
-
-    pygame.draw.polygon(SURFACE, BLUE, [[50,50],[0,100],[100,100]])
-
-    pygame.draw.line(SURFACE, BLACK, [120,0],[120,100])
-
+    txt = sysfont.render('%d' % n, True, (0,0,0))
+    SCREEN.blit(txt, (100,120))
     pygame.display.update()
-    CLOCK.tick(1)
-
-
-
-
-
-
+    CLOCK.tick(60)
 
 
 
