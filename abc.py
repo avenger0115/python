@@ -1,87 +1,147 @@
-##def add(x,y) :
-##    s = x+y
-##    return s
+##def square(a,b) :
+##    return a **b
 ##
-##result = add(10,20) + add(20,30)
-##print(result)
-##def get_max(x,y) :
-##    if x > y :
-##        return x
-##    else :
-##        return y
+##a = int(input("a를 입력 : "))
+##b = int(input("b 를 입력 : "))
 ##
-##x =int(input())
-##y = int(input())
-##
-##n = get_max(x,y)
+##n = square(a,b) 
 ##print(n)
-
-##def plus(x) :
-##    if x > 0 :
-##       return True
-##    else :
-##       return False
 ##
-##x = int(input("정수를 입력하세요.:"))
-##print(plus(x))
-        
-##def get_sum(n) :
-##    s = 0
-##    for i in range(1,n+1) :
-##        s+= i
-##    return s
+##def warning() :
+##    for _ in range(3) :
+##        print("Fier!")
+##warning()
+##
+##def two_times() :
+##    for i in range(1,10) :
+##        print("2 * %d = %d" % (i, 2* i), end = ' ')
+##two_times()
+##
+##def say(name) :
+##    print("Welcome,", name)
+##    return
+##say("minsu")
+##
+##def day(m,d) :
+##    print("Today is %s/%s." %(m,d))
+##day(12,7)
+##
+##a = 0
+##def f() :
+##    global a
+##    global b
+##    print(a)
+##    a = 10
+##    b = 20
+##f()
+##print(a)
+##print(b)
+##
+##def A() :
+##    print(1)
+##    r = B()
+##    print(r)
+##def B() :
+##    print(2)
+##    return 3
+##A()
+##print(4)
+##
+##def f(n) :
+##     print(n)
+##     if n > 1 :
+##         f(n-1)
+##f(3)
+##
+##def factorial(n) :
+##    if n == 1 :
+##        return 1
+##    else :
+##        return n * factorial(n-1)
+##
+##fac = factorial(4)
+##print("4! =", fac)
+## 
+##def judge(n) :
+##    if n > 0 :
+##        print("plus")
+##    elif n < 0 :
+##        print("minus")
+##    else :
+##        print("zero")
 ##
 ##n = int(input())
-##print("1부터 %d까지의 합은 %d입니다." %(n,get_sum(n)))
-
-##def get_sum(a,b) :
-##    s = 0
-##    for i in range(a,b+1) :
-##        s+= i
-##    return s
-##    
-##a = int(input())
-##b = int(input())
-##print("%d부터 %d까지의 합은 %d입니다." %(a,b,get_sum(a,b)))
-
-##def area(x,y) :
-##    s = x*y
-##    return s
-##    
-##w = int(input("가로입력 :"))
-##h = int(input("세로입력 :"))     
+##judge(n)
 ##
-##n = area(w,h)
-##print(n)
-
-##def area(w) :
-##    s = 3.14*w*w
-##    return s
-##
-##w = int(input("반지름 입력 : "))
-##
-##n = area(w)
-##print(n)
-
-##def number(w) :
-##    if w % 2 == 0 :
-##        return "even"
+##def season(n) :
+##    if n > 2 and n <6 :
+##        print("spring")
+##    elif n > 5 and n < 9 :
+##        print("summer")
+##    elif n > 8 and n < 12 :
+##        print("fall")
 ##    else :
-##        return "odd"
+##        print("winter")
 ##
-##w = int(input("정수를 입력하세요:"))
-##
-##n = number(w)
-##print(n)
+##n = int(input("월 입력"))
+##season(n)
 
-def square(a,b) :   
-    return a **b
+from random import *
+
+def lotto() :
+    lot = []
+
+    for i in range(6) :
+        lot.append(randint(1,45))
+    lot.sort()
+    print(lot)
+
+lotto()
+
+from random import *
+
+def lotto() :
+    lot = set()
+
+    while len(lot) < 6 :
+        lot.add(randint(1,45))#set()에 요소를 추가하는 함수
         
-a = int(input("a 를 입력 : "))
-b = int(input("b 를 입력 : "))
+    lot = list(lot)
+    lot.sort()
+    print(lot)
 
-n = square(a,b)
-print(n)
+lotto()
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
 
 
 
