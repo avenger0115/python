@@ -1,94 +1,68 @@
-##class Car :
-##    model = "bmw"
-##    color = "white"
+##class Character :
+##    def __init__(self, name, weapon) :
+##        self.name = name
+##        self.weapon = weapon
 ##
-##    def speedChange(self,v) :
-##        print("speedChange : %d" %v)
-##        self.speed = v
+##    def intro(self) :
+##        print("name :",self.name)
+##        print("weapon: ",self.weapon)
+##class action(Character) :
+##    step = 0
 ##
-##bmw = Car()
-##bmw.speedChange(20)
+##    def move_forward(self,n) :
+##        self.step +=n
+##        print("current location is %d. " % self.step)
+##    def move_backward(self,n) :
+##        self.step -=n
+##        print("current location is %d. " % self.step)
+##
+##    def turn_right(self) :
+##        print("turn", " right")
+##
+##    def turn_left(self) :
+##        print("turn", " left")
+##
+##lugo = action("Lugo" , "gun")
+##lugo.intro()
+##lugo.move_forward(10)
+##lugo.move_backward(3)
+##lugo.turn_right()
+##lugo.turn_left()
 
-##class Car :
-##    model = "bmw"
-##    color = "white"
-##
-##bmw = Car()
-##benz = Car()
-##
-##benz.model = "Benz"
-##benz.color = "black"
-##
-##print(bmw.model)
-##print(bmw.color)
-##
-##print(benz.model)
-##print(benz.color)
+##max = 0
+##for i in range(10) :
+##    n = int(input("정수 n 입력: "))
+##    if max < n :
+##        max = n
+##print(max)
 
-##class Car :
-##    model = "bmw"
-##    color = "white"
+##n = int(input("정수 n 입력: "))
 ##
-##    def speedChange(self,v) :
-##        Car.count += 1
-##        self.speed = v
-##
-##bmw = Car()
-##benz = Car()
-##
-##bmw.speedChange(100)
-##print("bmw speed :%d",bmw.speed)
-##print("number of speedChange :%d", Car.count)
-##
-##benz.speedChange(120)
-##print("Benz speed : %d", benz.speed)
-##print("number of speedChange : %d",Car.count)
+##for i in range(n) :
+##    for j in range(i+1) :
+##        print('*',end = ''  ) 
+##    print(' ')
 
-##class Car :
+##n = int(input("정수 n 입력 : "))
 ##
-##    def __init__(self,model,color) :
-##        self.model = model
-##        self.color = color
-##
-##    def info(self) :
-##        print("Model : ",self.model,",Color:",self.color)
-##        
-##bmw = Car("bmw","white")
-##benz = Car("benz","black")
-##bmw.info()
-##benz.info()
+##for i in range(1,10) :
+##    print("%d * %d = %d" % (n,i,n*i))
+##   
+x = int(input())
+y = int(input())
+
+if x >0 and y>0 :
+    print("제1사분면")
+elif x <0 and y>0 :
+    print("제2사분면")
+elif x< 0 and y<0 :
+    print("제3사분면")
+elif x > 0 and y < 0 :
+    print("제4사분면")
+
+
+
+
+
     
-class Car :
-    def __init__(self,model,color) :
-        self.model = model
-        self.color = color
-    def info(self) :
-        print("Model : ", self.model,",color:",self.color)
-
-class CarDrive(Car) :
-    def speedChange(self,v) :
-        self.speed = v
-        print("speedChange :",self.speed)
-
-bmw = CarDrive("bmw","white")
-bmw.info()
-bmw.speedChange(100)
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
     
